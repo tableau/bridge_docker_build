@@ -13,6 +13,6 @@ function setup_users_and_groups() {
   useradd --system --shell /bin/bash --create-home --home-dir "/home/${USER_NAME}" -u "${USER_ID}" -g "${GROUP_NAME}" "${USER_NAME}"
 }
 
-setup_users_and_groups
+#setup_users_and_groups
 yum -y localinstall "/build/$TABLEAU_BRIDGE_RPM"
 
