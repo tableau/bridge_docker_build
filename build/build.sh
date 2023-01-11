@@ -14,5 +14,5 @@ function setup_users_and_groups() {
 }
 
 #setup_users_and_groups
-yum -y localinstall "/build/$TABLEAU_BRIDGE_RPM"
+ACCEPT_EULA=y yum -y localinstall "/build/$TABLEAU_BRIDGE_RPM"
 
