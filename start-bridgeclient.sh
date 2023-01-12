@@ -3,6 +3,7 @@ set -e -x
 
 export CLIENT=$HOSTNAME
 export PATTOKENID=$HOSTNAME
+export PATTOKENFILE="/etc/secret/pat"
 export PAT_TOKEN=$(cat "/etc/secret/pat" | python -c \
     'import json,sys,os;print(json.load(sys.stdin)[os.getenv("HOSTNAME")])')
 
@@ -11,4 +12,5 @@ export PAT_TOKEN=$(cat "/etc/secret/pat" | python -c \
     --client="${CLIENT}" \
     --site="${SITE}" \
     --userEmail="${USEREMAIL}" \
-    --patTokenId="${PATTOKENID}"
+    --patTokenId="${PATTOKENID}" \
+    --patTokenFile="${PATTOKENFILE}"
