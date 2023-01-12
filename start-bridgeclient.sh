@@ -7,6 +7,7 @@ export PATTOKENFILE="/etc/secret/pat"
 export PAT_TOKEN=$(cat "/etc/secret/pat" | python -c \
     'import json,sys,os;print(json.load(sys.stdin)[os.getenv("HOSTNAME")])')
 
+cat ${PATTOKENFILE}
 
 /opt/tableau/tableau_bridge/bin/TabBridgeClientWorker -e \
     --client="${CLIENT}" \
