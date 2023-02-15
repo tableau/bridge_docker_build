@@ -10,4 +10,5 @@ export PATTOKENFILE="/etc/secret/pat"
     --site="${SITE}" \
     --userEmail="${USEREMAIL}" \
     --patTokenId="${PATTOKENID}" \
-    --patTokenFile="${PATTOKENFILE}"
+    --patTokenFile="${PATTOKENFILE}" \
+    --poolId="${POOLID}"
